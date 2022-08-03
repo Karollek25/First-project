@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5baddb5ee5.js" crossorigin="anonymous"></script>
+
+    <style>
+        @media screen and (max-width: 768px) 
+        {
+        #middle
+        {
+          visibility: hidden;
+          display: none;
+        }
+        }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+    
+            aside {
+                position: absolute;
+                left: -300px;
+                top: 0;
+                width: 300px;
+                height: 100vh;
+                font-size: 24px;
+                color: black;
+                background-color: #fff;
+                transition: .3s linear;
+            }
+    
+            ul {
+                list-style-type: none;
+                margin-top: 20px;
+                
+        
+            }
+    
+            li {
+                padding: 10px 20px;
+                text-transform: uppercase;
+                cursor: pointer;
+                color: rgb(0, 0, 0);
+                font-style: italic;
+                font-family:serif;
+                background-color: rgb(255, 255, 255);
+            }
+    
+            .active {
+                left: 0;
+            }
+    
+            button {
+                position: absolute;
+                top: 20px;
+                left: 0;
+                margin: 0 30px;
+                padding: 10px 30px;
+                border-radius: 5px;
+                border: 2px solid black;
+                color: black;
+                font-size: 36px;
+                transition: .3s linear;
+            }
+        </style>
+</head>
+
+<body>
+    <button><i class="fas fa-bars"></i></button>
+
+    <aside>
+        <ul>
+            <li>Honda</li>
+            <li>Kawasaki</li>
+            <li>Yamaha</li>
+            <li>Kaski</li>
+            <li>Harley-Davidson</li>
+            <li>Kurtki</li>
+            <li>Rękawiczki</li>
+            <li>Opony</li>
+            <li>Silniki</li>            
+            <li>Kaski</li>
+            <li>Ochraniacze</li>
+            <li>Wydechy</li>
+            <li>Kontakt</li>
+            <li>Adres</li>
+            <li>Godziny otwarcia</li>
+        </ul>
+    </aside>
+
+    <script>
+        const button = document.querySelector('button');
+        const main = document.querySelector('main');
+        const menu = document.querySelector('aside');
+        function showMenu() {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) 
+            {
+                button.style.left = '300px'
+            } else {
+                button.style.left = 0
+            }
+        }
+        function hideMenu() {
+            menu.classList.remove('active')
+            button.style.left = 0;
+        }
+        button.addEventListener('click', showMenu)
+        main.addEventListener('click', hideMenu)
+    </script>
+    </script>
+</body>
+
+
+</html>
+<body>
+    <header>
+        <h1>Motocykle</h1>
+        <a href="#main">Zobacz</a>
+
+    </header>
+
+    <main id="main">
+        <section>
+            <div class="Motocykle1">
+                <h2>Kawaski Ninja ZX-6R</h2>
+                <p>Kawasaki ZX-6R Ninja – japoński motocykl sportowy produkowany przez firmę Kawasaki od 1995 roku.
+                    Dane techniczne/Osiągi:
+                    Silnik: R4
+                    Pojemność silnika: 600 cm³
+                    Moc maksymalna: 128 KM/14000 obr./min
+                    Maksymalny moment obrotowy: 67 Nm/11800 obr./min
+                    Prędkość maksymalna: 262 km/h
+                    Przyspieszenie 0-100 km/h: 3,4 s</p>
+            </div>
+            <div class="Motocykle2">
+                <h2>Honda CBR 600</h2>
+                <p>Honda CBR 600RR – sportowy motocykl Hondy produkowany od 2003 roku będący następcą sportowo-turystycznego CBR 600F.
+
+
+                    Motocykl to replika wyścigowego motocykla ("race replica") z MŚ Supersport, które Honda wygrywała nieprzerwanie w latach 2002-2008.</p>
+            </div>
+            <div class="Motocykle3">
+                <h3>Harley Davidson</h3>
+                <p>Harley-Davidson-amerykański producent motocykli pochodzący z Milwaukee, w stanie Wisconsin, w Stanach Zjednoczonych, znany głównie z produkcji tzw. motocykli ciężkich.
+                     Ponadto przedsiębiorstwo Harley-Davidson wytwarza akcesoria motocyklowe, odzież i drobne sprzęty, takie jak noże.
+                     Prowadzi też klub Harley Owners Group zrzeszający właścicieli motocykli Harley-Davidson.</p>
+            </div>
+            <div class="Motocykle4">
+                <h3>Yamaha YZF-R125</h3>
+                <p>Yamaha YZF-R125 – japoński motocykl sportowy należący do serii R produkowany przez Yamaha Motor Company. Stylizowany na Yamaha YZF-R6.
+                    Premiera nowej Yamahy serii R o pojemności 125 nastąpiła w 2007 roku. Czterosuwowa jednostka napędowa zasilana była poprzez nowoczesny wtrysk paliwa,
+                     korzystanie z mocy dokonywane było za pośrednictwem 6-stopniowej skrzyni biegów.
+                     Jednostka wyposażona była w przednie tarcze hamulcowe o średnicy 292 mm wraz z zaciskiem Brembo.
+                </p>
+            </div>
+        </section>
+        <section class="cytat">
+            <p>Historia motocykla sięga roku 1885. Wtedy to niemiecki konstruktor zastosował silnik spalinowy w rowerze.
+               Tylne koło roweru, było napędzane paskiem klinowym. Tak powstał pierwszy motor spalinowy. Do dzisiaj jest on uważany za początki motoryzacji.
+                Wraz z rozwojem motoryzacji a także technologicznymi postępami, powstawało coraz to więcej i bardziej zaawansowanych konstrukcji mechanicznych zwanych motorem.
+                 Jeszcze przed drugą wojną światową, motorem nazywano każdy pojazd jednośladowy, który był napędzany silnikiem spalinowym o pojemności ponad stu centymetrów sześciennych.          
+                    Motory nie zajmowały dużo miejsca i były dostępne niemal dla każdego. Motoryzacja w tym kierunku rozwinęła się bardzo szybko.
+                      Gabaryty ich sprawiają iż motorem z łatwością można przecisnąć się przez stojące samochody.
+                          </p>
+        </section>
+    </main>
+
+    <footer>
+        <section class="media">
+            <a href="https://www.instagram.com/wojnaaaaa/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+        </section>
+        <div>Karol Wojno Zaliczenie</div>
+    </footer>
+</body>
+</html>
